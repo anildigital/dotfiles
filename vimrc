@@ -116,3 +116,19 @@ map ,# :s/^/#/<CR>
 map ,c :s/^#//<CR>
 
 set guifont=Monaco:h14
+" Make ',e' (in normal mode) give a prompt for opening files
+" " in the same dir as the current buffer's file.
+if has("unix")
+  map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
+else
+  map ,e :e <C-R>=expand("%:p:h") . "\\" <CR>
+endif
+
+" Make ',l' change vim's working directory to that of the current buffer
+if has("unix")
+  map ,l :cd <C-R>=expand("%:p:h") . "/" <CR><CR>
+else
+  map ,l :cd <C-R>=expand("%:p:h") . "\" <CR><CR>
+endif
+
+set paste

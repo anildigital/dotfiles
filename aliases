@@ -1,0 +1,13 @@
+alias ichr='ssh anil@icanhasruby.com -p 2222'
+alias vi='vim'
+alias m='mongrel_rails start'
+alias r='ruby' 
+alias ls="ls -ltr"
+alias gcruby='/Users/anilwadghule/code/rubygc/bin/ruby'
+alias gcrake='/Users/anilwadghule/code/rubygc/bin/rake'
+alias gcgem='/Users/anilwadghule/code/rubygc/bin/gem'
+alias gcirb='/Users/anilwadghule/code/rubygc/bin/irb'
+alias gcrails='/Users/anilwadghule/code/rubygc/bin/rails'
+alias Emacs="/Applications/Aquamacs\ Emacs.app/Contents/MacOS/Aquamacs\ Emacs &"
+alias Emacsdebug="/Applications/Aquamacs\ Emacs.app/Contents/MacOS/Aquamacs\ Emacs --debug-init &"
+alias readrails="mate `ruby -rubygems -e "puts( ['rails', 'activerecord', 'actionwebservice', 'activesupport'].collect { |gem| gems = Gem.source_index.find_name(gem); gems.last.full_gem_path; }.join(' '))"`"
