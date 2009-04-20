@@ -1,8 +1,8 @@
-alias ichr='ssh anil@icanhasruby.com -p 2222'
+alias ichr='ssh anil@icanhasruby.com'
 alias vi='vim'
 alias m='mongrel_rails start'
 alias r='ruby' 
-alias ls="ls -ltr"
+alias ls="ls -ltrG"
 alias gcruby='/Users/anilwadghule/code/rubygc/bin/ruby'
 alias gcrake='/Users/anilwadghule/code/rubygc/bin/rake'
 alias gcgem='/Users/anilwadghule/code/rubygc/bin/gem'
@@ -11,3 +11,15 @@ alias gcrails='/Users/anilwadghule/code/rubygc/bin/rails'
 alias Emacs="/Applications/Aquamacs\ Emacs.app/Contents/MacOS/Aquamacs\ Emacs &"
 alias Emacsdebug="/Applications/Aquamacs\ Emacs.app/Contents/MacOS/Aquamacs\ Emacs --debug-init &"
 alias readrails="mate `ruby -rubygems -e "puts( ['rails', 'activerecord', 'actionwebservice', 'activesupport'].collect { |gem| gems = Gem.source_index.find_name(gem); gems.last.full_gem_path; }.join(' '))"`"
+alias mysql=/usr/local/mysql/bin/mysql
+alias mysqladmin=/usr/local/mysql/bin/mysqladmin
+alias sshfs=/Applications/sshfs/bin/mount_sshfs
+alias qa='ssh anilw@192.168.10.116'
+alias sf='ssh anilw@192.168.10.117'
+alias dev='ssh anilw@dev.purpletrail.com'
+alias lessd='cd Users/anildigital/Code/rails/therunaround/log && less -n development.log'
+alias off='sudo apachectl stop'
+alias on='sudo apachectl start'
+alias httpdump='sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E "Host\: .*|GET \/.*"'
+alias 'ps?'='ps ax | grep '
+alias sq="curl -Is slashdot.org | egrep '^X-(F|B|L)' | cut -d \- -f 2"

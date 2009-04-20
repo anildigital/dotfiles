@@ -1,27 +1,40 @@
-export PATH=/sw/bin:/sw/sbin:/opt/local/bin:/usr/local/bin:/opt/local/sbin:/usr/local/mysql/bin:/Users/anilwadghule/installs/airsdk/bin:/Users/anilwadghule/code/jruby-1.1/bin:/Applications/Shoes.app/Contents/MacOS:${PATH}
-export PERL5LIB="/usr/local/svn/perl/darwin-thread-multi-2level"
-export APXS2=/usr/local/apache2
-export PATH=/usr/local/apache2/bin:$PATH
-export EC2_HOME=/Users/anilwadghule/ec2-api-tools-1.3-19403
-export PATH=$PATH:$EC2_HOME/bin
-export EC2_PRIVATE_KEY=~/.ssh/ec2/pk-PMN35B5MXIUTGJ6IWACCPS2B5Q4NKBCC.pem
-export EC2_CERT=~/.ssh/ec2/cert-PMN35B5MXIUTGJ6IWACCPS2B5Q4NKBCC.pub
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
-
-export AWS_ACCESS_KEY_ID=0TPVQTGBR8ATZXNQGCR2
-export AWS_SECRET_ACCESS_KEY=flOrJM/Mbd8UCYZgfF4LhHQjN1oOzMAFGa4x+1S0
-
+source ~/.j.sh
 source ~/.git-completion.sh
+complete -o default -o nospace -F _git gh
 
 if [ -f ~/.aliases ]; then
 . ~/.aliases
 fi
 
+
+export PATH=~/bin:$PATH
+
 function pless {
   pygmentize $1 | less -r
 }
 
-# assuming ~/.git-completion is where your complete script lives
-source ~/.git-completion.sh
-complete -o default -o nospace -F _git gh
+# Cheat autocomplete
+function complete_cheat {
+COMPREPLY=()
+if [ $COMP_CWORD = 1 ]; then
+sheets=`cheat sheets | grep '^ '`
+COMPREPLY=(`compgen -W "$sheets" -- $2`)
+fi
+}
+complete -F complete_cheat cheat
 
+
+# http://henrik.nyh.se/2008/12/git-dirty-prompt
+# http://www.simplisticcomplexity.com/2008/03/13/show-your-git-branch-name-in-your-prompt/
+#   username@Machine ~/dev/dir[master]$   # clean working directory
+#   username@Machine ~/dev/dir[master*]$  # dirty working directory
+
+function parse_git_dirty {
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
+}
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
+}
+export PS1='\u@\h \[\033[1;33m\]\w\[\033[0m\]$(parse_git_branch)$ '
+
+export EDITOR='vim'
