@@ -1,3 +1,4 @@
+require 'rubygems'
 #def time(times = 1)
 #  require 'benchmark'
 #  ret = nil

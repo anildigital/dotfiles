@@ -1,7 +1,11 @@
 alias ichr='ssh anil@icanhasruby.com'
 alias vi='vim'
-alias m='mongrel_rails start'
-alias r='ruby' 
+alias ss='./script/server'
+alias sg='./script/generate'
+alias sc='./script/console'
+alias sp='./script/plugin install'
+alias r='rake'
+alias rmig='rake db:migrate'
 alias ls="ls -ltrG"
 alias gcruby='/Users/anilwadghule/code/rubygc/bin/ruby'
 alias gcrake='/Users/anilwadghule/code/rubygc/bin/rake'
@@ -10,8 +14,8 @@ alias gcirb='/Users/anilwadghule/code/rubygc/bin/irb'
 alias gcrails='/Users/anilwadghule/code/rubygc/bin/rails'
 alias Emacs="/Applications/Aquamacs\ Emacs.app/Contents/MacOS/Aquamacs\ Emacs &"
 alias Emacsdebug="/Applications/Aquamacs\ Emacs.app/Contents/MacOS/Aquamacs\ Emacs --debug-init &"
-alias readrails="mate `ruby -rubygems -e "puts( ['rails', 'activerecord', 'actionwebservice', 'activesupport'].collect { |gem| gems = Gem.source_index.find_name(gem); gems.last.full_gem_path; }.join(' '))"`"
 alias mysql=/usr/local/mysql/bin/mysql
+alias mysqldump=/usr/local/mysql/bin/mysqldump
 alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 alias sshfs=/Applications/sshfs/bin/mount_sshfs
 alias qa='ssh anilw@192.168.10.116'
@@ -23,3 +27,29 @@ alias on='sudo apachectl start'
 alias httpdump='sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E "Host\: .*|GET \/.*"'
 alias 'ps?'='ps ax | grep '
 alias sq="curl -Is slashdot.org | egrep '^X-(F|B|L)' | cut -d \- -f 2"
+alias ip="python -c \"import socket; print '\n'.join(socket.gethostbyname_ex(socket.gethostname())[2])\""
+alias lshb="ls -l ~/.local/homebrew/Library/Formula/"
+alias h='history'
+alias tu="top -o cpu"
+alias tm="top -o vsize"
+alias g="git status"
+alias ff="open -a Firefox"
+alias l="ls -l"
+alias ..="cd .."
+alias cdd="cd -"
+alias reload="source ~/Code/dotfiles/aliases"
+alias ea="mate ~/Code/dotfiles/aliases && reload"
+alias bashrc='vi ~/.bashrc && source ~/.bashrc'
+alias bash_profile='vi ~/.bash_profile && source ~/.bash_profile'
+alias aliases='vi ~/.aliases && source ~/.aliases'
+alias git='hub'
+
+#alias readrails="mate `ruby -rubygems -e "puts( ['rails', 'activerecord', 'activeresource', 'actionpack', 'activesupport'].collect { |gem| gems = Gem.source_index.find_name(gem); gems.last.full_gem_path; }.join(' '))"`"
+alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
+alias systail='tail -f -n0 /var/log/system.log'
+alias socks="ssh -N -D 4000 anil@icanhasruby.com"
+alias gemi='gem install --no-rdoc --no-ri'
+alias inexistant="(IFS=:;for p in $PATH; do test -d $p || echo $p; done)"
+alias vi='emacs -nw'
+alias vim='emacs -nw'
+alias railscode="cd ~/Code/rails/rails"

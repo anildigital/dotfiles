@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+# Usage: rcat [file ...]
+#
+# Reads files sequentially, writing them to the standard output.  The
+# file operands are processed in command-line order.  If file is a
+# single dash (`-') or absent, rcat reads from the standard input.
+#
+# Like cat(1), but dumber.
+
+puts ARGF.read
