@@ -1,16 +1,19 @@
 require 'rubygems'
-#def time(times = 1)
-#  require 'benchmark'
-#  ret = nil
-#  Benchmark.bm {|x| x.report {times.times {ret = yield }}}
-#end
-require 'rubygems'
-require 'utility_belt'
-require 'wirble'
-Wirble.init
-Wirble.colorize
 
-UtilityBelt.equip(:all)
+def time(times = 1)
+  require 'benchmark'
+  ret = nil
+  Benchmark.bm {|x| x.report {times.times {ret = yield }}}
+end
+
+if RUBY_VERSION < '1.9'
+  require 'utility_belt'
+  require 'wirble'
+  Wirble.init
+  Wirble.colorize
+
+  UtilityBelt.equip(:all)
+end
 
 def log_to(stream=STDOUT)
   ActiveRecord::Base.logger = Logger.new(stream)

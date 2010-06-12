@@ -51,6 +51,12 @@ alias systail='tail -f -n0 /var/log/system.log'
 alias socks="ssh -N -D 4000 anil@icanhasruby.com"
 alias gemi='gem install --no-rdoc --no-ri'
 alias inexistant="(IFS=:;for p in $PATH; do test -d $p || echo $p; done)"
-alias vi='emacs -nw'
-alias vim='emacs -nw'
+alias emacs='emacsclient -c'
+alias vi='emacsclient -c'
+alias vim='emacsclient -c'
 alias railscode="cd ~/Code/rails/rails"
+alias ports="sudo lsof -iTCP -sTCP:LISTEN -P"
+alias t="tree -L 1 -C -h"
+alias devrails='ruby ~/Code/rails/rails/bin/rails'
+alias devrails2='ruby ~/Code/rails/rails/railties/bin/rails'
+alias rc='cd ~/Code/rails/rails'
