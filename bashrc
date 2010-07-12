@@ -56,6 +56,9 @@ export MANPATH=`brew --prefix`/share/man:$MANPATH
 # mysql bin
 export PATH=/usr/local/mysql/bin:$PATH
 
+# lisp
+export SBCL_HOME=/Users/anil/.local/homebrew/lib/sbcl
+
 
 # Set environment variables
 
