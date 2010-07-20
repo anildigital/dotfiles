@@ -50,7 +50,7 @@ complete -F complete_cheat cheat
 export PATH=~/bin:$PATH
 
 ## Brew paths                                                                                                                                     
-export PATH=~/.local/homebrew/:~/.local/homebrew/bin:$PATH                                                                                       
+export PATH=~/.local/homebrew/:~/.local/homebrew/bin:/Users/anil/.local/homebrew/sbin:$PATH                                                                                       
 export MANPATH=`brew --prefix`/share/man:$MANPATH 
 
 # mysql bin
