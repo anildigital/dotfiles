@@ -1,5 +1,5 @@
 # Include other scripts
-source ~/.j.sh
+source ~/bin/j.sh
 source ~/.git-completion.sh
 complete -o default -o nospace -F _git gh
 
