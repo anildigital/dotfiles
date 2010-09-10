@@ -61,5 +61,5 @@ export SBCL_HOME=/Users/anil/.local/homebrew/lib/sbcl
 
 
 # Set environment variables
+export ALTERNATE_EDITOR=emacs EDITOR=emacsclient VISUAL=emacsclient
 
-export EDITOR='emacsclient -c'

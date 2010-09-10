@@ -6,7 +6,7 @@ def time(times = 1)
   Benchmark.bm {|x| x.report {times.times {ret = yield }}}
 end
 
-if RUBY_VERSION < '1.9' and (defined?(RUBY_ENGINE) and RUBY_ENGINE != 'rbx')
+if RUBY_VERSION < '1.9' and (defined?(RUBY_ENGINE) and RUBY_ENGINE != 'rbx' and RUBY_ENGINE != 'jruby')
   require 'utility_belt'
   require 'wirble'
   Wirble.init

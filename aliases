@@ -43,7 +43,6 @@ alias ea="mate ~/Code/dotfiles/aliases && reload"
 alias bashrc='vi ~/.bashrc && source ~/.bashrc'
 alias bash_profile='vi ~/.bash_profile && source ~/.bash_profile'
 alias aliases='vi ~/.aliases && source ~/.aliases'
-alias git='hub'
 
 #alias readrails="mate `ruby -rubygems -e "puts( ['rails', 'activerecord', 'activeresource', 'actionpack', 'activesupport'].collect { |gem| gems = Gem.source_index.find_name(gem); gems.last.full_gem_path; }.join(' '))"`"
 alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
@@ -52,8 +51,9 @@ alias socks="ssh -N -D 4000 anil@icanhasruby.com"
 alias gemi='gem install --no-rdoc --no-ri'
 alias inexistant="(IFS=:;for p in $PATH; do test -d $p || echo $p; done)"
 alias emacs='emacsclient -c'
-alias vi='emacsclient -c'
-alias vim='emacsclient -c'
+alias vi=emacs
+alias vim=emacs
+alias e=emacs
 alias railscode="cd ~/Code/rails/rails"
 alias ports="sudo lsof -iTCP -sTCP:LISTEN -P"
 alias t="tree -L 1 -C -h"
