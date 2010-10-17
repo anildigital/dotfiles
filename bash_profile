@@ -8,14 +8,6 @@ export MANPATH=/opt/local/share/man:$MANPATH
 # Finished adapting your MANPATH environment variable for use with MacPorts.
 
 
-# -- start rip config -- #
-RIPDIR=/Users/anil/.rip
-RUBYLIB="$RUBYLIB:$RIPDIR/active/lib"
-PATH="$PATH:$RIPDIR/active/bin"
-export RIPDIR RUBYLIB PATH
-# -- end rip config -- #
-
-
 # Useful functions
 function take {
 	mkdir $1
@@ -32,7 +24,7 @@ function isreg {
 }
 
 
-if [[ -s /Users/anil/.rvm/scripts/rvm ]] ; then source /Users/anil/.rvm/scripts/rvm ; fi
+if [[ -s /Users/Anil/.rvm/scripts/rvm ]] ; then source /Users/Anil/.rvm/scripts/rvm ; fi
 
 # http://gist.github.com/132456
 # Bash snippet to open new shells in most recently visited dir.

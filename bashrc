@@ -49,15 +49,11 @@ complete -F complete_cheat cheat
 
 export PATH=~/bin:$PATH
 
-## Brew paths                                                                                                                                     
-export PATH=~/.local/homebrew/:~/.local/homebrew/bin:/Users/anil/.local/homebrew/sbin:$PATH                                                                                       
-export MANPATH=`brew --prefix`/share/man:$MANPATH 
-
 # mysql bin
 export PATH=/usr/local/mysql/bin:$PATH
 
 # lisp
-export SBCL_HOME=/Users/anil/.local/homebrew/lib/sbcl
+export SBCL_HOME=/Users/Anil/.local/homebrew/lib/sbcl
 
 
 # Set environment variables
