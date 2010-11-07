@@ -39,14 +39,16 @@ alias gemi='gem install --no-rdoc --no-ri'
 
 alias inexistant="(IFS=:;for p in $PATH; do test -d $p || echo $p; done)"
 
+alias emacsd='/Applications/Emacs.app/Contents/MacOS/Emacs --daemon'
 alias emacs='emacsclient -c'
-alias vi=emacs
-alias vim=emacs
-alias e=emacs
+alias vi="not found"
+alias vim="not found"
+alias em=emacs
 alias railscode="cd ~/Code/rails/rails"
 
 alias ports="sudo lsof -iTCP -sTCP:LISTEN -P"
 alias t="tree -L 1 -C -h"
+alias term="rvm 1.8.7 && terminitor"
 alias devrails='ruby ~/Code/rails/rails/bin/rails'
 alias devrails2='ruby ~/Code/rails/rails/railties/bin/rails'
 alias rc='cd ~/Code/rails/rails'
