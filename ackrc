@@ -1,1 +1,7 @@
 --pager=less -R
+--sort-files
+--color
+--context=1
+--follow
+--group
+--all

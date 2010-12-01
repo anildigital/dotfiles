@@ -1,0 +1,15 @@
+export WORKING_DIR=~/Code/rails/ujaza
+cd $WORKING_DIR; eval "nohup /Applications/Base.app/Contents/MacOS/Base &"; gitx
+
+tmux start-server
+tmux new-session -d -s masterpiece -n work
+
+tmux new-window -tmasterpiece:1 -n server
+tmux new-window -tmasterpiece:2 -n test
+
+tmux send-keys -tmasterpiece:0 'cd $WORKING_DIR' C-m
+tmux send-keys -tmasterpiece:1 'cd $WORKING_DIR && rails s' C-m
+tmux send-keys -tmasterpiece:2 'cd $WORKING_DIR && bundle exec autotest -f' C-m
+
+tmux select-window -tmasterpiece:0
+tmux attach-session -d -tmasterpiece
