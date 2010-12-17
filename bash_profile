@@ -2,6 +2,10 @@ if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
 
+if [ -f ~/.work_paths ]; then
+  . ~/.work_paths
+fi
+
 
 # MacPorts Installer addition on 2008-12-27_at_21:41:25: adding an appropriate MANPATH variable for use with MacPorts.
 export MANPATH=/opt/local/share/man:$MANPATH
