@@ -12,9 +12,6 @@ export MANPATH=/opt/local/share/man:$MANPATH
 # Finished adapting your MANPATH environment variable for use with MacPorts.
 
 
-# Node.js NODE_PATH
-export NODE_PATH="/usr/local/lib/node"
-
 # Useful functions
 function take {
 	mkdir $1

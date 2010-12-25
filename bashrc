@@ -49,6 +49,10 @@ complete -F complete_cheat cheat
 
 export PATH=~/bin:$PATH
 
+# npm
+export PATH=/usr/local/share/npm/bin:$PATH
+export NODE_PATH="/usr/local/lib/node"
+
 # mysql bin
 export PATH=/usr/local/mysql/bin:$PATH
 
