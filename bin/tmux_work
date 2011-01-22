@@ -2,13 +2,13 @@ export WORKING_DIR=~/Work/ideas
 cd $WORKING_DIR; eval gitx
 
 tmux start-server
-tmux new-session -d -s masterpiece -n work
+tmux new-session -d -s work_masterpiece -n work
 
-tmux new-window -tmasterpiece:1 -n server
-tmux new-window -tmasterpiece:2 -n test
+tmux new-window -twork_masterpiece:1 -n server
+tmux new-window -twork_masterpiece:2 -n test
 
-tmux send-keys -tmasterpiece:0 'cd $WORKING_DIR' C-m
-tmux send-keys -tmasterpiece:1 'cd $WORKING_DIR && mongrel_rails start' C-m
+tmux send-keys -twork_masterpiece:0 'cd $WORKING_DIR' C-m
+tmux send-keys -twork_masterpiece:1 'cd $WORKING_DIR && mongrel_rails start' C-m
 
-tmux select-window -tmasterpiece:0
-tmux attach-session -d -tmasterpiece
+tmux select-window -twork_masterpiece:0
+tmux attach-session -d -twork_masterpiece
