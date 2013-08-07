@@ -1,10 +1,8 @@
 # Include other scripts
 source ~/bin/j.sh
-source ~/.git-completion.sh
-complete -o default -o nospace -F _git gh
 
-if [ -f ~/.aliases ]; then
-    . ~/.aliases
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
 fi
 
 
@@ -26,39 +24,13 @@ function lambda_prompt {
 }
 export PS1='\u@\h \[\033[1;33m\]\w\[\033[0m\]$(parse_git_branch)$(lambda_prompt) '
 
-function show_ruby {
-    export PS1='\u@\h \[\033[1;33m\]\w\[\033[0m\][$(~/.rvm/bin/rvm-prompt)]$(parse_git_branch)$(lambda_prompt) '
-}
-
 function pless {
     pygmentize $1 | less -r
 }
 
-# Cheat autocomplete
-function complete_cheat {
-    COMPREPLY=()
-    if [ $COMP_CWORD = 1 ]; then
-        sheets=`cheat sheets | grep '^ '`
-        COMPREPLY=(`compgen -W "$sheets" -- $2`)
-    fi
-}
-complete -F complete_cheat cheat
-
 
 # Set Paths
-
 export PATH=~/bin:$PATH
-
-# npm
-export PATH=/usr/local/share/npm/bin:$PATH
-export NODE_PATH="/usr/local/lib/node"
-
-# mysql bin
-export PATH=/usr/local/mysql/bin:$PATH
-
-# lisp
-export SBCL_HOME=/Users/Anil/.local/homebrew/lib/sbcl
-
 
 # Set environment variables
 export ALTERNATE_EDITOR=emacs EDITOR=emacsclient VISUAL=emacsclient

@@ -6,15 +6,6 @@ def time(times = 1)
   Benchmark.bm {|x| x.report {times.times {ret = yield }}}
 end
 
-if RUBY_VERSION < '1.9' and (defined?(RUBY_ENGINE) and RUBY_ENGINE != 'rbx' and RUBY_ENGINE != 'jruby')
-  require 'utility_belt'
-  require 'wirble'
-  Wirble.init
-  Wirble.colorize
-
-  UtilityBelt.equip(:all)
-end
-
 def log_to(stream=STDOUT)
   ActiveRecord::Base.logger = Logger.new(stream)
   ActiveRecord::Base.clear_active_connections!
@@ -27,7 +18,6 @@ class Object
     (methods - Object.instance_methods).sort
   end
 end
-
 
 # q as exit
 alias q exit

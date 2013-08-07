@@ -1,4 +1,3 @@
-alias ichr='ssh anil@icanhasruby.com'
 alias vi='vim'
 
 alias rm='rm -i'
@@ -39,11 +38,7 @@ alias gemi='gem install --no-rdoc --no-ri'
 
 alias inexistant="(IFS=:;for p in $PATH; do test -d $p || echo $p; done)"
 
-alias emacsd='/Applications/Emacs.app/Contents/MacOS/Emacs --daemon'
-alias emacsclient="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
 alias emacs='emacsclient -c'
-alias vi="not found"
-alias vim="not found"
 alias em="emacs"
 alias railscode="cd ~/Code/rails/rails"
 
