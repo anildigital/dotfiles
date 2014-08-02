@@ -6,6 +6,10 @@ if [ -f ~/.work_bashrc ]; then
 	. ~/.work_bashrc
 fi
 
+if [ -f ~/.work_aliases ]; then
+	. ~/.work_aliases
+fi
+
 if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
 fi

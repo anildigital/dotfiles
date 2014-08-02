@@ -20,3 +20,5 @@ alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' 
 
 alias ports="sudo lsof -iTCP -sTCP:LISTEN -P"
 alias t="tree -L 1 -C -h"
+
+alias webshare='python -m SimpleHTTPServer'
