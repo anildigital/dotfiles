@@ -17,8 +17,25 @@ alias cdd="cd -"
 
 alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
 
-
 alias ports="sudo lsof -iTCP -sTCP:LISTEN -P"
 alias t="tree -L 1 -C -h"
 
 alias webshare='python -m SimpleHTTPServer'
+alias shipit='git push origin master && git push heroku master'
+
+alias e="emacs"
+alias edit='emacsclient $@ || vim $@'
+alias gentags="gtags -e -R --exclude=node_modules"
+
+alias hl='pbpaste | highlight --font="Source Code Pro" --style=anotherdark --syntax=csharp -O rtf | pbcopy'
+
+alias startmongo='mongod --profile=1 --slowms=1 --config /usr/local/etc/mongod.conf'
+alias  mongologs='tail -f /usr/local/var/log/mongodb/mongo.log'
+
+
+alias runznc='docker run -d -p 6667:6667 -v $HOME/.znc:/znc-data jimeh/znc'
+
+# Ruby ones
+alias bi='bundle install'
+
+alias refresh='git stash && git pull --rebase && git stash apply'
