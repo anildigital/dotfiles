@@ -42,7 +42,7 @@ eval "$(hub alias -s)"
 
 #export JAVA_HOME="$(/usr/libexec/java_home)"
 #export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/'
-export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/'
+export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/'
 export EC2_HOME="/Users/anil/Code/ec2-api-tools-1.6.13.0"
 
 alias ports="lsof -n -iTCP -P | grep LISTEN"
@@ -55,7 +55,6 @@ export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
 
 export DISPLAY=192.168.59.3:0
-export MAVEN_OPTS="-Djavax.net.ssl.trustStore=/Users/anil/Projects/common/keystore.pks -Djavax.net.ssl.trustStorePassword=razor7hedge"
 
 export PATH=~/.bin:$PATH
 export GOPATH=$HOME/work
@@ -81,10 +80,8 @@ function light() {
 }
 
 export MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=1024m"
+
 #export JAVA_HOME=/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
 #export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home
-export HOMEBREW_GITHUB_API_TOKEN="82c1f836bf4f8cdacd25b81bb10528a2f70b37c2"
-
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
