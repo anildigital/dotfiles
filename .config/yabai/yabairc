@@ -48,4 +48,15 @@ yabai -m config window_gap                   06
 yabai -m rule --add app="Emacs" manage=off
 yabai -m signal --add event=window_created app="Emacs" action='~/.local/bin/yabai-float-children'
 
+# manage off apps
+yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^System Preferences$" manage=off
+yabai -m rule --add app="^Preview$" manage=off
+yabai -m rule --add app="^Messages$" manage=off
+yabai -m rule --add app="^Activity Monitor$" manage=off
+
+# spacebar
+# SPACEBAR_HEIGHT=$(spacebar -m config height)
+# yabai -m config external_bar all:0:$SPACEBAR_HEIGHT
+
 echo "yabai configuration loaded.."
