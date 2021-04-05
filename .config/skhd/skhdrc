@@ -33,12 +33,12 @@ shift + cmd - 5 : yabai -m window --space 5
 shift + cmd - 6 : yabai -m window --space 6
 
 # Move all the container to workspace
-shift + alt - 1 : yabai -m space --move 1
-shift + alt - 2 : yabai -m space --move 2
-shift + alt - 3 : yabai -m space --move 3
-shift + alt - 4 : yabai -m space --move 4
-shift + alt - 5 : yabai -m space --move 5
-shift + alt - 6 : yabai -m space --move 6
+# shift + alt - 1 : yabai -m space --move 1
+# shift + alt - 2 : yabai -m space --move 2
+# shift + alt - 3 : yabai -m space --move 3
+# shift + alt - 4 : yabai -m space --move 4
+# shift + alt - 5 : yabai -m space --move 5
+# shift + alt - 6 : yabai -m space --move 6
 
 alt - r : yabai -m space --rotate 90
 
