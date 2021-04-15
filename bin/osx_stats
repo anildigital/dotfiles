@@ -1,0 +1,6 @@
+#!/bin/bash
+timestamp=$(date +%s)000000000
+hostname=$(hostname | tr "[:upper:]" "[:lower:]")
+cpu=$(/usr/local/bin/osx-cpu-temp -c | sed -e 's/\([0-9.]*\).*/\1/')
+
+echo "cpu_temp,tag=$hostname temp=$cpu $timestamp"
