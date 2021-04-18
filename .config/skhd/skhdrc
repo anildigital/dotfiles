@@ -81,4 +81,8 @@ ctrl + alt - d : yabai -m space --layout float
 # toggle window split type
 shift + cmd - r : yabai -m window --toggle split
 
-shift + cmd - space : yabai -m window --display prev; yabai -m display --focus prev  || yabai -m window --display next;  yabai -m display --focus next
+# Move window to another display
+shift + cmd - space : cur_window=$(yabai -m query --windows --window | jq '.id') && \
+                      yabai -m window --display prev  || yabai -m window --display next && \
+                      yabai -m window --focus ${cur_window}
+
