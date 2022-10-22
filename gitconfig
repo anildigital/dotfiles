@@ -1,0 +1,43 @@
+[alias]
+  co = checkout
+  st = status
+  r = restore
+  rs = restore --staged
+  recent = branch --sort=-committerdate --format=\"%(committerdate:relative)%09%(refname:short)\"
+[user]
+  name = Anil Wadghule
+  email = anildigital@gmail.com
+  signingkey = 0A5362AB176FFCF7F2428060A3194703088AB31F
+
+[includeIf "gitdir:~/ESL/"]
+  path = ~/ESL/.gitconfig
+
+[commit]
+  gpgsign = true
+[init]
+  defaultBranch = main
+[core]
+  excludesfile = /Users/anil/.gitignore_global
+[gpg]
+  program = gpg
+[rebase]
+  autostash = true
+[fetch]
+  prune = true
+[pull]
+  rebase = true
+[filter "lfs"]
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+[advice]
+  ignoredHook = false
+[github]
+  user = anildigital
+[credential]
+  helper = /usr/local/share/gcm-core/git-credential-manager-core
+[credential "https://dev.azure.com"]
+  useHttpPath = true
+[rerere]
+  enabled = true
