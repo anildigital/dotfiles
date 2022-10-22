@@ -1,0 +1,1 @@
+/Users/anil/.config/fisherman/free/functions/free.fish

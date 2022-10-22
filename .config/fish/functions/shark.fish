@@ -1,0 +1,1 @@
+/Users/anil/.config/fisherman/shark/functions/shark.fish
