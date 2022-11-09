@@ -18,13 +18,18 @@ set -gx PATH $PATH .bin
 set -gx PATH $PATH /usr/local/bin
 set -gx PATH $PATH  ~/Code/dotfiles/bin
 
+# Postgres
+set -gx PGPORT 5432
+set -gx PGHOST localhost
+set -gx PGUSER postgres
+
 # Rabbitmq bin
 set -gx PATH $PATH /usr/local/Cellar/rabbitmq/3.8.3/sbin/
 
 # Postgres
 set -gx PATH $PATH /Applications/Postgres.app/Contents/Versions/13/bin/
 
-# Elixir ls
+# asdf
 set -gx PATH $PATH /Users/anil/.asdf/shims/
 set -gx PATH $PATH /Users/anil/Code/elixir-ls/release/
 

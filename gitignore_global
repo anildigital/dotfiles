@@ -4,3 +4,6 @@
 logfile
 .markdown-preview.html
 .dialyzer_ignore
+sql-playground.org
+sql_playground.org
+.dir-locals.el
